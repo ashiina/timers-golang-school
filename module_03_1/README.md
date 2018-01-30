@@ -6,11 +6,15 @@ go get -u github.com/golang/dep
 ```
 
 Check what is installed
-
 ```
 ls $GOPATH/bin
 ls $GOPATH/pkg
 ls $GOPATH/src/github.com/golang/dep
+```
+
+Try using it
+```
+dep help
 ```
 
 ## Create your own package
@@ -18,8 +22,8 @@ ls $GOPATH/src/github.com/golang/dep
 Create a workspace for your package
 
 ```
-mkdir $GOPATH/src/module_003
-cd $GOPATH/src/module_003
+mkdir $GOPATH/src/module_03_1
+cd $GOPATH/src/module_03_1
 mkdir mytool
 cd mytool
 vim main.go
@@ -58,7 +62,7 @@ vim main.go
 package main
 
 import "fmt"
-import "module_003/mytool"
+import "module_03_1/mytool"
 
 func main() {
 	fmt.Println(mytool.Double(5))
