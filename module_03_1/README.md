@@ -8,8 +8,14 @@ go get -u github.com/golang/dep
 Check what is installed
 ```
 ls $GOPATH/bin
-ls $GOPATH/pkg
+# dep 
+
+ls $GOPATH/pkg/$GOOS_$GOARCH/github.com/golang
+# dep  dep.a
+
 ls $GOPATH/src/github.com/golang/dep
+# ... *.go
+
 ```
 
 Try using it
@@ -49,7 +55,8 @@ go install -v ./mytool
 Check what is installed
 
 ```
-ls $GOPATH/pkg
+ls $GOPATH/pkg/$GOOS_$GOARCH
+# mytool.a 
 ```
 
 ## Use your package
